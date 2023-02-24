@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// ## Colors
+
+// ### Primary
+
+$Red: hsl(0, 100%, 74%);
+$Green: hsl(154, 59%, 51%);
+
+// ### Accent
+
+$Blue: hsl(248, 32%, 49%);
+
+// ### Neutral
+
+$Dark-Blue: hsl(249, 10%, 26%);
+$Grayish-Blue: rgb(185, 182, 211);
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  background-color: $Red;
+  background-image: url("../images/bg-intro-desktop.png");
+  background-repeat: repeat-y;
+  background-size: cover;
+  display: flex;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  min-width: 772px;
+  margin: auto;
+  gap: 2rem;
+
+  //   background-color: red;
+
+  #info-container {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    // background-color: aqua;
+    color: white;
+    gap: 1rem;
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 0.8rem;
+    }
+  }
+  #form-container {
+    width: 50%;
+
+    // background-color: blue;
+    h2 {
+      background-color: $Blue;
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 0.5rem 0rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 300;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.2);
+      span {
+        font-weight: 700;
+        color: white;
+      }
+    }
+    form {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      gap: 1rem;
+      border-radius: 5px;
+
+      div {
+        position: relative;
+
+        .error {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          opacity: 0;
+          visibility: hidden;
+          transition: 0.4s ease;
+        }
+        .active {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      input {
+        outline: none;
+        background-color: transparent;
+        width: 100%;
+        padding: 0.8rem 1rem;
+        font-weight: 800;
+        border-radius: 5px;
+        font-size: 0.6rem;
+        color: $Dark-Blue;
+        border: 1px solid rgba(185, 182, 211, 0.7);
+        font-family: "Poppins", sans-serif;
+      }
+      .active-input {
+        border: 1px solid $Red;
+        pointer-events: none;
+        &::placeholder {
+          color: $Red;
+        }
+      }
+
+      #submit {
+        background-color: $Green;
+        border: none;
+        color: white;
+        font-weight: 400;
+        text-transform: uppercase;
+        box-shadow: inset 0px -3px 5px 2px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+
+        &:hover {
+          background-color: hsla(154, 59%, 51%, 0.8);
+        }
+      }
+      p {
+        color: $Grayish-Blue;
+        font-size: 0.7rem;
+        font-weight: 500;
+        text-align: center;
+        span {
+          color: $Red;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  main {
+    padding: 2rem 0rem;
+    flex-direction: column;
+    text-align: center;
+    min-width: 300px;
+    #info-container,
+    #form-container {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+}

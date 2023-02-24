@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  background-color: #ff7a7a;
+  background-image: url("../images/bg-intro-desktop.png");
+  background-repeat: repeat-y;
+  background-size: cover;
+  display: flex; }
+
+main {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  min-width: 772px;
+  margin: auto;
+  gap: 2rem; }
+  main #info-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 1rem; }
+    main #info-container h1 {
+      font-size: 2.5rem; }
+    main #info-container p {
+      font-weight: 300;
+      font-size: 0.8rem; }
+  main #form-container {
+    width: 50%; }
+    main #form-container h2 {
+      background-color: #6055a5;
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 0.5rem 0rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 300;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.2); }
+      main #form-container h2 span {
+        font-weight: 700;
+        color: white; }
+    main #form-container form {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      gap: 1rem;
+      border-radius: 5px; }
+      main #form-container form div {
+        position: relative; }
+        main #form-container form div .error {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          opacity: 0;
+          visibility: hidden;
+          transition: 0.4s ease; }
+        main #form-container form div .active {
+          opacity: 1;
+          visibility: visible; }
+      main #form-container form input {
+        outline: none;
+        background-color: transparent;
+        width: 100%;
+        padding: 0.8rem 1rem;
+        font-weight: 800;
+        border-radius: 5px;
+        font-size: 0.6rem;
+        color: #3e3c49;
+        border: 1px solid rgba(185, 182, 211, 0.7);
+        font-family: "Poppins", sans-serif; }
+      main #form-container form .active-input {
+        border: 1px solid #ff7a7a;
+        pointer-events: none; }
+        main #form-container form .active-input::placeholder {
+          color: #ff7a7a; }
+      main #form-container form #submit {
+        background-color: #38cc8c;
+        border: none;
+        color: white;
+        font-weight: 400;
+        text-transform: uppercase;
+        box-shadow: inset 0px -3px 5px 2px rgba(0, 0, 0, 0.2);
+        cursor: pointer; }
+        main #form-container form #submit:hover {
+          background-color: rgba(56, 204, 140, 0.8); }
+      main #form-container form p {
+        color: #b9b6d3;
+        font-size: 0.7rem;
+        font-weight: 500;
+        text-align: center; }
+        main #form-container form p span {
+          color: #ff7a7a;
+          font-weight: 800; }
+
+@media screen and (max-width: 992px) {
+  main {
+    padding: 2rem 0rem;
+    flex-direction: column;
+    text-align: center;
+    min-width: 300px; }
+    main #info-container,
+    main #form-container {
+      width: 100%; } }
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 14px; } }
